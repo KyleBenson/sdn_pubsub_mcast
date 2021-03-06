@@ -103,7 +103,7 @@ class ProbingDataPathMonitor(DataPathMonitor):
         :param new_timeout: in milliseconds
         :return:
         """
-        self._probing_socket.settimeout(new_timeout / 1000.0)
+        self._probing_socket.settimeout(3.0 + new_timeout / 1000.0)
 
     def recv_response(self):
         """
